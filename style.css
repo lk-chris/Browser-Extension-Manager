@@ -29,6 +29,63 @@ body{
     padding: 0 60px;
     font-family: Noto Sans;
 }
+
+/*Light mode */
+
+body, 
+header, 
+.extension-card, 
+.filter-section h2,
+.btn {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Special case for Background Gradients */
+body {
+    transition: background 0.6s ease; /* Note: This only works smoothly in some modern browsers */
+    /* Safer alternative: use a solid background color as a fallback */
+    background-color: #040918; 
+}
+body.light-mode{
+    background-image: var(--bg-light);
+}
+body.light-mode .filter-section h2{
+    color: var(--neutral-800);
+}
+body.light-mode header{
+    background-color: var(--neutral-200);
+    box-shadow: 0px 4px 8px rgba(0,0,0, 0.2);
+}
+body.light-mode .header-mode-toggle{
+    background-color: var(--neutral-300);
+}
+body.light-mode .btn{
+    background-color: var(--neutral-200);
+    color: var(--neutral-800);
+}
+body.light-mode .btn-active{
+    background-color: var(--red-300);
+    color: var(--neutral-100);
+}
+body.light-mode .extension-card{
+    background-color: var(--neutral-0);
+    color: var(--neutral-800);
+    border: 0.5px solid var(--neutral-300);
+}
+body.light-mode .extension-card h3{
+    color: var(--neutral-800);
+}
+body.light-mode .extension-btn{
+    color: var(--neutral-800);
+    border: 1px solid var(--neutral-300);
+}
+body.light-mode .toggle-slider{
+    background-color: var(--neutral-300);
+}
+body.light-mode .toggle-slider::before{
+    background-color: var(--neutral-100);
+}
+
 /* BODY MOBILE */
 @media(max-width: 425px){
     body{

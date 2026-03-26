@@ -92,6 +92,28 @@ gridContainer.addEventListener('change', (e) => {
     }
 })
 
+
+// LIGHT MODE & DARK MODE
+const themeBox = document.querySelector('.header-mode-toggle');
+const modeToggleIcon = document.querySelector('.header-mode-toggle img'); // Target the img inside the box
+const body = document.body; // Simpler way to grab the body tag
+
+let themeStatus = 'dark';
+
+themeBox.addEventListener('click', () => {
+    if (themeStatus === 'dark') {
+        // Switch to Light Mode
+        body.classList.add('light-mode');
+        modeToggleIcon.src = 'assets/images/icon-moon.svg';
+        themeStatus = 'light';
+    } else {
+        // Switch back to Dark Mode
+        body.classList.remove('light-mode');
+        modeToggleIcon.src = 'assets/images/icon-sun.svg'; // Assuming you have a sun icon
+        themeStatus = 'dark';
+    }
+});
+
 // CALLS
 
 loadExtension();
