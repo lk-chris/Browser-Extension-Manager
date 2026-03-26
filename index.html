@@ -6,6 +6,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
     <!-- fonts -->
@@ -28,69 +29,16 @@
       <h2>Extensions List</h2>
 
       <div class="filters">
-        <button class="btn">All</button>
-        <button class="btn">Active</button>
-        <button class="btn btn-active">Inactive</button>
+        <button class="btn btn-active js-filter-all">All</button>
+        <button class="btn js-filter-active">Active</button>
+        <button class="btn js-filter-inactive">Inactive</button>
       </div>
     </section>
 
     <section class="extensions-grid">
-      <div class="extension-card">
-        <div class="extension-card-top">
-          <img src="/assets/images/logo-json-wizard.svg" alt="">
-          <div class="extension-card-top-p">
-            <h3>SpeedBoost</h3>
-            <p>Optimizes browser resource usage to accelerate page loading
-            </p>
-          </div>
-        </div>
-        <div class="extension-card-bottom">
-          <button class="extension-btn">Remove</button>
-
-          <label class="toggle-switch">
-            <input type="checkbox" class="toggle-input">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      <div class="extension-card">
-        <div class="extension-card-top">
-          <img src="/assets/images/logo-json-wizard.svg" alt="">
-          <div class="extension-card-top-p">
-            <h3>SpeedBoost</h3>
-            <p>Optimizes browser resource usage to accelerate page loading
-            </p>
-          </div>
-        </div>
-        <div class="extension-card-bottom">
-          <button class="extension-btn">Remove</button>
-
-          <label class="toggle-switch">
-            <input type="checkbox" class="toggle-input">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-      <div class="extension-card">
-        <div class="extension-card-top">
-          <img src="/assets/images/logo-json-wizard.svg" alt="">
-          <div class="extension-card-top-p">
-            <h3>SpeedBoost</h3>
-            <p>Optimizes browser resource usage to accelerate page loading
-            </p>
-          </div>
-        </div>
-        <div class="extension-card-bottom">
-          <button class="extension-btn">Remove</button>
-
-          <label class="toggle-switch">
-            <input type="checkbox" class="toggle-input">
-            <span class="toggle-slider"></span>
-          </label>
-        </div>
-      </div>
+      
     </section>
     
-    <script src="" async defer></script>
+    <script src="index.js" async defer></script>
   </body>
 </html>

@@ -24,9 +24,16 @@ body::-webkit-scrollbar {
 }
 body{
     background-image: var(--bg-dark);
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
     padding: 0 60px;
     font-family: Noto Sans;
+}
+/* BODY MOBILE */
+@media(max-width: 425px){
+    body{
+        padding: 0 15px;
+    }
 }
 
 header{
@@ -54,6 +61,15 @@ header{
     cursor: pointer;
 }
 
+/* HEADER MOBILE */
+@media(max-width: 425px){
+    .header {
+        margin-top: 20px;
+        padding: 10px 15px;
+    }
+
+}
+
 
 
 /*  FILTER  SECTION*/
@@ -62,7 +78,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px 0 0 0;
+    margin: 30px 0 0 0;
+    position: sticky;
+    top: 0; /* Sticks to the very top of the screen */
+    z-index: 10;
+    backdrop-filter: blur(5px);
+    padding: 20px 0;
 }
 .filter-section h2{
     color: var(--neutral-100);
@@ -96,6 +117,16 @@ header{
 .filters button:active{
     background-color: var(--red-300);
 }
+
+/* FILTER SECTION MOBILE*/
+@media(max-width: 425px){
+    .filter-section{
+        flex-direction: column;
+        gap: 20px;
+        backdrop-filter: blur(10px);
+    }
+}
+
 
 /*  CARDS SECTION*/
 
@@ -147,6 +178,16 @@ header{
     font-size: 16px;
     cursor: pointer;
     border: 0.5px solid var(--neutral-600);
+}
+
+/*EXTENSION*/
+@media(max-width: 425px) {
+    .extensions-grid {
+        /* Drop the gap and min-width slightly for small screens */
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 20px 0;
+    }
 }
 
 /*  BUTTON TOGGLE*/
