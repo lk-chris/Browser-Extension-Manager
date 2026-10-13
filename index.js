@@ -14,8 +14,6 @@ async function loadExtension(){
     }
 }
 
-loadExtension();
-
 // DISPLAY CARDS
 
 function renderCards(extensions){
@@ -25,7 +23,7 @@ function renderCards(extensions){
         const cardHTML = `
             <div class="extension-card">
                 <div class="extension-card-top">
-                    <img src="${item.logo}" alt="">
+                    <img src="${item.logo}" alt="${item.name} logo">
                     <div class="extension-card-top-p">
                         <h3>${item.name}</h3>
                         <p>${item.description}
@@ -92,11 +90,24 @@ gridContainer.addEventListener('change', (e) => {
     }
 })
 
+// REMOVE EXTENSION
+gridContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('extension-btn')) {
+        const cardName = e.target.dataset.name;
+        allExtensions = allExtensions.filter(item => item.name !== cardName);
+
+        const card = e.target.closest('.extension-card');
+        if (card) {
+            card.remove();
+        }
+    }
+});
+
 
 // LIGHT MODE & DARK MODE
 const themeBox = document.querySelector('.header-mode-toggle');
 const modeToggleIcon = document.querySelector('.header-mode-toggle img'); // Target the img inside the box
-const body = document.body; // Simpler way to grab the body tag
+const body = document.body; 
 
 let themeStatus = 'dark';
 
@@ -109,7 +120,7 @@ themeBox.addEventListener('click', () => {
     } else {
         // Switch back to Dark Mode
         body.classList.remove('light-mode');
-        modeToggleIcon.src = 'assets/images/icon-sun.svg'; // Assuming you have a sun icon
+        modeToggleIcon.src = 'assets/images/icon-sun.svg'; 
         themeStatus = 'dark';
     }
 });
