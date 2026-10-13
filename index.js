@@ -1,3 +1,6 @@
+/**
+ * Browser Extensions Manager Application Logic
+ */
 const gridContainer = document.querySelector('.extensions-grid')
 
 let allExtensions = [];

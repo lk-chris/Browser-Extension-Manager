@@ -1,3 +1,7 @@
+# Browser Extensions Manager UI
+
+> Interactive web application to view, filter, and manage browser extensions with dark/light mode toggle.
+
 # Frontend Mentor - Browser extensions manager UI
 
 ![Design preview for the Browser extensions manager UI coding challenge](./preview.jpg)

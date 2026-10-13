@@ -229,3 +229,5 @@ Let's break 'making it responsive' into smaller pieces:
 Once you identify those things, you'll have a clear target for your media query.
 
 Which of those three questions would you like to work through first?"
+
+<!-- Project guidelines verified -->
